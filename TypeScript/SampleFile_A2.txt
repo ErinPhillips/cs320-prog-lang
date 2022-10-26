@@ -1,0 +1,5 @@
+Mexia TX, 76667, 🐕, Dog (U+1F415)
+Makaweli HI, 96769, 🐈, Cat (U+1F408)a
+Lafayette LA, 70507, 🐿, Chipmunk (U+1F43F)
+Bascom FL, 32423, 🛩, Airplane (U+1F6E9)
+White Plains NY, 10601, 🏠, House (U+1F3E0)

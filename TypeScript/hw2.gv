@@ -1,0 +1,96 @@
+/* Erin Phillips
+CSCI320 Assignment 2
+Abstract Syntax Tree for the source code given. 
+
+I certify this work is entirely my own.
+*/
+
+graph {
+
+    {
+        node [shape=square, fontcolor=red]
+        rank = same;
+        fred
+        wilma
+        i
+        x
+        2
+        10
+    }
+    {
+        node []
+        rank = same; var1; var2; for_stmt;
+    }
+    {
+        node []
+        rank = same; rhs1; lhs1; rhs2; lhs2; body; c_style;
+    }
+    {
+        node[]
+        rank = same; fn; fn_call1; for_incr; for_var; for_test; 
+    }
+    pgm -- var1;
+    pgm -- var2;
+    pgm -- for_stmt;
+
+    var1 -- lhs1;
+    var1 -- rhs1;
+
+    rhs1 -- fn;
+    lhs1 -- fred;
+
+    fn -- params1;
+    fn -- fn_body;
+
+    params1 -- x;
+
+    fn_body -- op_exp;
+    op_exp -- exp;
+    op_exp -- var;
+    
+    exp -- 2;
+    var -- x;
+
+    var2 -- rhs2;
+    var2 -- lhs2;
+
+    rhs2 -- 10;
+
+    lhs2 -- wilma; 
+
+    for_stmt -- body;
+    for_stmt -- c_style;
+
+    body -- fn_call1;
+    fn_call1 -- params2;
+    fn_call1 -- "console.log";
+
+    params2 -- fn_call2;
+
+    fn_call2 -- params3;
+    fn_call2 -- fred;
+
+    params3 -- i;
+
+    c_style -- for_test;
+    c_style -- for_incr;
+    c_style -- for_var;
+
+    for_test -- for_cond_rhs;
+    for_test -- for_cond;
+    for_test -- for_cond_lhs;
+
+    for_cond_rhs -- wilma;
+    for_cond -- "<";
+    for_cond_lhs -- i;
+
+    for_incr -- "++";
+    for_incr -- i;
+
+    for_var -- for_rhs;
+    for_var -- for_lhs;
+
+    for_rhs -- 0;
+    for_lhs -- i;
+
+}
